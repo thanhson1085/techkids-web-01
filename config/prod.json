@@ -1,0 +1,6 @@
+{
+    "logs": {
+        "level": "error",
+        "handleExceptions": false
+    }
+}
