@@ -1,6 +1,36 @@
 {
+    "server": {
+        "host": "0.0.0.0",
+        "port": 3000
+    },
+    "db": {
+        "uri": "mongodb://localhost:27017/test"
+    },
+    "redis": {
+        "host": "localhost",
+        "port": "6379",
+        "password": "123456",
+        "prefix": "sonnst"
+    },
+    "mailer": {
+        "from": "no-reply@devops.com",
+        "host": "smtp.example.com",
+        "secureConnection": true,
+        "port": 465,
+        "transportMethod": "SMTP",
+        "auth": {
+            "user": "test@exampe.com",
+            "pass": "xxxxx"
+        }
+    },
     "logs": {
-        "level": "error",
+        "level": "debug",
         "handleExceptions": false
-    }
+    },
+    "unauthorization": [
+        "/api/v1/users/login", 
+        "/api/v1/users/create"
+    ],
+    "token_expire": 86400,
+    "time_format": "YYYY-MM-DD H:mm:ss:SSS"
 }
